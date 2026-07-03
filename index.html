@@ -4,20 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manabu Shimada</title>
-<meta name="description" content="Manabu Shimada — composer, sound designer and sound artist based in London and Tokyo, working primarily in sonic branding.">
+<meta name="description" content="Manabu Shimada is a psychoacoustic strategist, composer, sound designer, and co-founder of Land Ahoy Studio.">
 <style>
   :root {
-    --text: #111;
+    --text: #5d5c5c;
     --bg: #fff;
+    --gutter: 11px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-size: 13px;
-    line-height: 1.75;
+    line-height: 1.58;
+    font-weight: 400;
     color: var(--text);
     background: var(--bg);
-    padding: 40px;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   a {
     color: var(--text);
@@ -25,48 +29,75 @@
     text-underline-offset: 2px;
   }
   a:hover { opacity: 0.5; }
-  .layout {
-    display: flex;
-    gap: 80px;
-    max-width: 1080px;
+  .page {
+    display: grid;
+    grid-template-columns: repeat(24, minmax(0, 1fr));
+    column-gap: var(--gutter);
+    row-gap: var(--gutter);
+    max-width: 1500px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: clamp(72px, 9vw, 132px) clamp(24px, 4vw, 60px) 80px;
   }
-  .main { flex: 1; min-width: 0; }
-  .side { width: 300px; flex-shrink: 0; }
+  .main {
+    grid-column: 4 / span 10;
+    min-width: 0;
+  }
+  .side {
+    grid-column: 14 / span 10;
+    align-self: start;
+    min-width: 0;
+  }
   h1 {
     font-size: 13px;
     font-weight: normal;
-    margin-bottom: 48px;
+    grid-column: 4 / span 10;
+    margin-bottom: 1.15em;
   }
   h2 {
     font-size: 13px;
     font-weight: normal;
     font-style: italic;
-    margin: 36px 0 12px;
+    margin: 1.55em 0 0.32em;
   }
   .main section:first-of-type h2 { margin-top: 0; }
   ul { list-style: none; }
-  li { margin-bottom: 2px; }
+  li { margin-bottom: 0; }
   .work-title { font-style: italic; }
   .side img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 1.35em;
   }
-  .bio p { margin-bottom: 16px; }
+  .bio {
+    max-width: 520px;
+    margin-left: calc((100% + var(--gutter)) / 10);
+  }
+  .bio p { margin-bottom: 1.1em; }
   @media (max-width: 760px) {
-    body { padding: 24px; }
-    .layout { flex-direction: column; gap: 48px; }
-    .side { width: 100%; max-width: 340px; }
-    h1 { margin-bottom: 36px; }
+    .page {
+      display: block;
+      min-height: auto;
+      padding: 48px 24px 64px;
+    }
+    h1 { margin-bottom: 1.15em; }
+    .side {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 42px;
+    }
+    .bio {
+      max-width: none;
+      margin-left: 0;
+    }
   }
 </style>
 </head>
 <body>
 
-<h1>Manabu Shimada</h1>
-
-<div class="layout">
+<main class="page">
+  <h1>Manabu Shimada</h1>
   <div class="main">
 
     <section>
@@ -126,15 +157,20 @@
 
   </div>
 
-  <div class="side">
+  <aside class="side">
     <!-- Replace photo.jpg with the portrait image (recommended width: 600-900px) -->
     <img src="photo.jpg" alt="Portrait of Manabu Shimada" onerror="this.style.display='none'">
     <div class="bio">
-      <p>Manabu Shimada is a Japanese composer, sound designer and sound artist based in London and Tokyo, working primarily in sonic branding. Grounded in music-cognition research, he has crafted sonic identities and bespoke audio for Sony, Uniqlo, Audi and Swarovski, and exhibited sound art with Es Devlin at Art Basel, London Design Festival and Milan Design Week.</p>
-      <p lang="ja">島田学は、ロンドンと東京を拠点とする作曲家・サウンドデザイナー・サウンドアーティスト。ソニックブランディングを軸に、音楽認知の研究に基づいたアプローチで、ブランドの「音の記憶」をつくる。</p>
+      <p>Manabu Shimada is a Psychoacoustic Strategist, Composer, Sound Designer, and co-founder of Land Ahoy Studio. He does not simply sell music, he designs unconscious emotional pathways that carry brands deep into the listener's mind.</p>
+      <p>For over a decade, working across London and Tokyo, he has crafted sonic identities for Sony, Bao Bao Issey Miyake, and Swarovski, directed GAC Motor's 48-sound EV suite, and exhibited sound art with Es Devlin.</p>
+      <p>He is also a composer at the award-winning studio Resonate, creating bespoke audio for global brands.</p>
+      <p>Grounded in music cognition research and fluent in code, he turns split-second audio into lasting brand memory and measurable business impact.</p>
+      <p lang="ja">島田学は、音響心理学ストラテジスト、作曲家、サウンドデザイナーであり、Land Ahoy Studioの共同創業者である。彼が提供しているのは、単なる音楽ではない。ブランドがリスナーの記憶に深く刻まれるよう、無意識の感情を動かす“音の導線”を設計している。</p>
+      <p lang="ja">ロンドンと東京を拠点に10年以上にわたり、Sony、Bao Bao Issey Miyake、Swarovskiのソニックアイデンティティを手がけ、GAC Motorの48音EVサウンドスイートをディレクション。Es Devlinと共にサウンドアートも発表してきた。</p>
+      <p lang="ja">音楽認知研究を基盤とし、コードにも精通。一瞬の音を、持続するブランド記憶と測定可能なビジネスインパクトへと変えている。</p>
     </div>
-  </div>
-</div>
+  </aside>
+</main>
 
 </body>
 </html>
