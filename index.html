@@ -12,11 +12,9 @@
     --gutter: 11px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  /* Fluid type scale: tracks viewport width, ~13px at 1440px, capped at both ends */
-  html { font-size: clamp(11.5px, 0.9vw, 15px); }
   body {
     font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    font-size: 1rem;
+    font-size: 13px;
     line-height: 1.58;
     font-weight: 400;
     color: var(--text);
@@ -52,13 +50,13 @@
     min-width: 0;
   }
   h1 {
-    font-size: 1.23rem;
+    font-size: 16px;
     font-weight: normal;
     grid-column: 4 / span 10;
     margin-bottom: 1.15em;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: normal;
     font-style: italic;
     margin: 1.55em 0 0.32em;
@@ -74,7 +72,7 @@
     margin-bottom: 1.35em;
   }
   .bio {
-    max-width: 40rem;
+    max-width: 520px;
     margin-left: calc((100% + var(--gutter)) / 10);
   }
   .bio p { margin-bottom: 1.1em; }
@@ -85,7 +83,6 @@
     margin-top: 64px;
   }
   @media (max-width: 760px) {
-    html { font-size: 13px; }
     .page {
       display: block;
       min-height: auto;
